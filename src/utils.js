@@ -74,6 +74,5 @@ const transformToComponent = (value) => {
 };
 
 const pad = (str, padWith, len) => {
-  console.log(str, padWith, len);
   return padWith.repeat(len - str.length) + str;
 };
