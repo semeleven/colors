@@ -3,8 +3,10 @@ import chroma from "chroma-js";
 import { goodAllColors } from "./all-colors";
 import { result as divColors } from "./div-colors";
 import { result as iosColors } from "./ios-colors";
+import { result as androidColors } from "./android-colors";
 
 import "./styles.css";
+
 
 const doneRaw = [
   "rgba(255,255,255,1) -> primary_white",
@@ -58,6 +60,17 @@ Object.values(iosColors).forEach((el) => {
     };
   } else {
     all[el.value] = { ...el, place: ["IOS", ...el.place] };
+  }
+});
+
+Object.values(androidColors).forEach((el) => {
+  if (all[el.value]) {
+    all[el.value] = {
+      ...all[el.value],
+      place: all[el.value].place.concat(["Android", ...el.place])
+    };
+  } else {
+    all[el.value] = { ...el, place: ["Android", ...el.place] };
   }
 });
 
