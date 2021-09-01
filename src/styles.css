@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+  background: #3b3b3b;
+  color: #fff;
+}
+p {
+  margin: 0;
+}
+
+.color {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+table {
+  width: 100%;
+}
+th {
+  text-align: left;
+}
+td {
+  vertical-align: top;
+}
